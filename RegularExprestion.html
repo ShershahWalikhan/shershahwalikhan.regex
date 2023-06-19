@@ -1,0 +1,67 @@
+<html>
+    <title>RegEx page</title>
+    <head>
+        <style>
+            body{background-color: aqua;}
+        </style>
+        <script>
+            function numdata()
+            {
+                var instr=document.myform.tdata.value;
+                const patrn=/\d{5}-\d{7}-\d{1}/;
+                if (patrn.test(instr))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }
+            function email()
+            {
+                var stre=document.myform.Edata.value;
+                const patrn=/\w+@\w+.\w{3}/;
+                if (patrn.test(stre))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }
+            function reg()
+            {
+                var strr=document.myform.Rdata.value;
+                const patrn=/su-\d{2}-\d{2}-\d{3}-\d{3}/;
+                if (patrn.test(strr))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }  
+        </script>
+    </head>
+    <body>
+        <h1>The Regular Expretion</h1>
+        <form name="myform">
+
+            CNIC:
+            <input type="text" name="tdata">
+            <button onclick="numdata()">click </button> <br>
+
+            Email:
+            <input type="text" name="Edata">
+            <button onclick="email()">Email</button> <br>
+
+            Reg.no:
+            <input type="text" name="Rdata">
+            <button onclick="reg()">Reg no </button> <br>
+
+        </form>
+    </body>
+</html>
